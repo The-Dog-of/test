@@ -195,3 +195,20 @@ if (contactForm) {
         });
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const slides = document.querySelectorAll('.slideshow-container .slide');
+    let currentSlide = 0;
+    const slideInterval = 15000; 
+
+    if (slides.length > 0) {
+        setInterval(() => {
+
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+
+        }, slideInterval);
+    }
+});
