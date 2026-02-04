@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const slides = document.querySelectorAll('.slideshow-container .slide');
     let currentSlide = 0;
-    const slideInterval = 8000; 
+    const slideInterval = 6000; 
 
     if (slides.length > 0) {
         setInterval(() => {
